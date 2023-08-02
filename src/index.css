@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@font-face {
+    font-family: "kalameh";
+    src: url("./assets/font/KalamehBold.ttf");
+}
+
+
+@layer base {
+    html,body{
+        @apply h-full w-full
+    }
+    #root{
+        @apply h-full w-full flex items-center justify-center font-kalameh
+    }
+}
+
+@layer components{
+    .container{
+        @apply max-w-sm h-[300px] p-4 flex flex-col justify-center items-center text-center
+    }
+    .randomBtn{
+        @apply  bg-indigo-500 text-white py-2 px-3 rounded shadow-sm text-xl hover:scale-105 hover:shadow-xl transition-all ease-linear
+    }
+    .copyColorBtn{
+        @apply bg-rose-500 text-white py-2 px-5 rounded shadow-sm text-xl hover:scale-105 hover:shadow-xl transition-all ease-linear
+    }
+    main{
+        @apply w-full h-full flex items-center justify-center
+    }
+}
+.container{
+    background: rgba( 255, 255, 255, 0.3 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 5px );
+    -webkit-backdrop-filter: blur( 5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.mainBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+}
